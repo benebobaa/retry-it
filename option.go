@@ -4,6 +4,11 @@ import (
 	"time"
 )
 
+// Option defines a function type used to modify the retry configuration.
+// It allows for functional options to be applied when initializing the Config struct,
+// enabling customization of retry behavior.
+type Option func(*Config)
+
 // WithMaxAttempts configures the maximum number of retry attempts.
 // If the operation fails, it will be retried up to the specified number of times.
 // A value of 0 or less means there will be no retries.

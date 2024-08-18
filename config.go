@@ -37,11 +37,6 @@ type Config struct {
 	Jitter float64
 }
 
-// Option defines a function type used to modify the retry configuration.
-// It allows for functional options to be applied when initializing the Config struct,
-// enabling customization of retry behavior.
-type Option func(*Config)
-
 // defaultConfig provides a set of well-chosen default values for the retry configuration.
 // These defaults aim to provide a balanced retry mechanism, suitable for a wide range of use cases.
 // The default configuration includes a maximum of 5 attempts, an initial delay of 100ms,
